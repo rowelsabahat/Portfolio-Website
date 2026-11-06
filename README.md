@@ -1,4 +1,4 @@
-# Portfolio Codex Kickoff Pack
+# Portfolio Kickoff Pack
 
 Start by copying `DESIGN_BRIEF.md`, `IMPLEMENTATION_PLAN.md`, `AGENTS.md`, and `CODEX_PROMPTS.md` into your Codex project's folder. Keep the latest approved vertical mockup and inspiration files in the local `design references/` directory. Then send **Prompt A** from `CODEX_PROMPTS.md`.
 
