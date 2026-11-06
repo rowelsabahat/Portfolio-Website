@@ -1,0 +1,18 @@
+/node_modules/
+/.next/
+/out/
+/build/
+/coverage/
+/.vercel/
+next-env.d.ts
+*.tsbuildinfo
+.env*
+!.env.example
+*.pem
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+# Keep all design references local.
+/design references/
