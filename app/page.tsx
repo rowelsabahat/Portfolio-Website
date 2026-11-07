@@ -1,5 +1,13 @@
-import { SitePlaceholder } from "../components/site-placeholder";
+import { Hero } from "../components/hero/hero";
+import { SiteHeader } from "../components/navigation/site-header";
 
 export default function Home() {
-  return <SitePlaceholder />;
+  return (
+    <>
+      <SiteHeader />
+      <main id="home" tabIndex={-1}>
+        <Hero />
+      </main>
+    </>
+  );
 }
