@@ -1,0 +1,100 @@
+.section {
+  background: var(--color-charcoal);
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 2fr);
+  gap: clamp(1.75rem, 3vw, 3rem);
+  width: min(88%, 88rem);
+  margin-inline: auto;
+  padding-block: clamp(2.5rem, 4.2vw, 4rem);
+}
+
+.heading {
+  border-inline-end: 1px solid color-mix(in srgb, var(--color-mint) 55%, transparent);
+  padding-inline-end: clamp(1rem, 2vw, 2rem);
+}
+
+.label, .number {
+  color: var(--color-mint);
+  font: 0.82rem/1.5 var(--font-mono);
+  text-transform: uppercase;
+}
+
+.heading h2 {
+  max-width: 11ch;
+  margin-top: 0.65rem;
+  font: italic 700 clamp(2rem, 3.35vw, 3.35rem)/0.95 var(--font-display);
+  letter-spacing: -0.055em;
+  text-transform: uppercase;
+}
+
+.credential {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  gap: 0.45rem clamp(0.7rem, 1.55vw, 1.4rem);
+  align-items: baseline;
+  padding-block: 1.1rem;
+}
+
+.credential:first-child { padding-top: 0; }
+.credential:last-child { padding-bottom: 0; }
+
+.credential + .credential {
+  border-top: 1px solid color-mix(in srgb, var(--color-cream) 32%, transparent);
+}
+
+.credential h3 {
+  margin-top: 0.15rem;
+  font: 700 clamp(1.35rem, 2.15vw, 2rem)/1.12 var(--font-display);
+  letter-spacing: -0.03em;
+}
+
+.field {
+  margin-top: 0.3rem;
+  font-size: 0.94rem;
+}
+
+.detail {
+  align-self: center;
+  padding-inline-start: 0.85rem;
+  border-inline-start: 1px solid color-mix(in srgb, var(--color-cream) 32%, transparent);
+  font: 0.8rem/1.4 var(--font-mono);
+}
+
+.detail a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  min-height: 44px;
+  width: fit-content;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+}
+
+.detail a:hover { color: var(--color-mint); }
+
+@media (max-width: 839px) {
+  .inner {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  .heading {
+    border-inline-end: 0;
+    padding-inline-end: 0;
+  }
+
+  .heading h2 { max-width: 19ch; }
+}
+
+@media (max-width: 560px) {
+  .credential { grid-template-columns: auto minmax(0, 1fr); }
+
+  .detail {
+    grid-column: 2;
+    padding-inline-start: 0;
+    border-inline-start: 0;
+  }
+}

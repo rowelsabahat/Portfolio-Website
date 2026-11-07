@@ -13,6 +13,12 @@
 }
 
 @layer base {
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+
   body {
     background: var(--color-charcoal);
     color: var(--color-cream);
