@@ -74,8 +74,6 @@
 /* Keep all slide sizes in the grid so navigation never resizes the panel. */
 .slide[data-active="false"] { visibility: hidden; }
 
-.art img { display: block; width: 100%; height: auto; aspect-ratio: 480 / 224; }
-
 .copy {
   padding-inline-start: clamp(1rem, 2vw, 1.8rem);
   border-inline-start: 1px solid color-mix(in srgb, var(--color-cyan) 55%, transparent);
@@ -102,9 +100,4 @@
 @media (max-width: 639px) {
   .slide { grid-template-columns: minmax(0, 1fr); align-content: start; }
   .copy { padding: 1rem 0 0; border-inline-start: 0; border-top: 1px solid color-mix(in srgb, var(--color-cyan) 55%, transparent); }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .slide[data-active="true"] { animation: slide-in 160ms ease-out; }
-  @keyframes slide-in { from { opacity: 0.55; } to { opacity: 1; } }
 }

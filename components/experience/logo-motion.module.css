@@ -1,0 +1,112 @@
+.art svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 480 / 224;
+}
+
+/* The static SVG is the final state. Only the active slide gets animation. */
+@media (prefers-reduced-motion: no-preference) {
+  .art[data-playing="true"] {
+    & :global(#experience-rbc-display-frame),
+    & :global(#experience-rbc-display-frame ~ path) {
+      animation: power-on 450ms ease-out backwards;
+    }
+
+    & :global(#experience-rbc-lion-and-globe),
+    & :global(#experience-rbc-wordmark) {
+      transform-box: fill-box;
+      animation: scan-down 570ms 210ms ease-out backwards;
+    }
+
+    & :global(#experience-qnx-wordmark > path) {
+      transform-box: fill-box;
+      animation: wipe-across 300ms var(--delay, 0ms) ease-out backwards;
+    }
+
+    & :global(#experience-qnx-wordmark > path:nth-child(2)) { --delay: 100ms; }
+    & :global(#experience-qnx-wordmark > path:nth-child(3)) { --delay: 200ms; }
+    & :global(#experience-qnx-wordmark > path:nth-child(4)) { --delay: 300ms; }
+
+    & :global(#experience-qnx-display-frame),
+    & :global(#experience-qnx-display-frame + path),
+    & :global(#experience-qnx-signal-band),
+    & :global([data-logo="qnx"] text) {
+      animation: appear 240ms 490ms ease-out backwards;
+    }
+
+    & :global(#experience-ubc-plate),
+    & :global(#experience-ubc-plate + path) {
+      transform-box: fill-box;
+      animation: scan-down 340ms ease-out backwards;
+    }
+
+    & :global(#experience-ubc-wordmark > path) {
+      animation: rise 330ms var(--delay, 130ms) ease-out backwards;
+    }
+
+    & :global(#experience-ubc-wordmark > path:nth-child(2)) { --delay: 245ms; }
+    & :global(#experience-ubc-wordmark > path:nth-child(3)) { --delay: 360ms; }
+
+    & :global([data-logo="ubc"] text) {
+      animation: appear 260ms 510ms ease-out backwards;
+    }
+
+    & :global(#experience-ubc-medicine-emblem > path:first-of-type) {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: airframe 450ms ease-out backwards;
+    }
+
+    & :global(#experience-ubc-medicine-emblem > path:nth-of-type(2)) {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: assemble 300ms 260ms ease-out backwards;
+    }
+
+    & :global(#experience-ubc-medicine-emblem > circle),
+    & :global(#experience-ubc-medicine-emblem > path:last-of-type) {
+      animation: appear 280ms 130ms ease-out backwards;
+    }
+
+    & :global(#experience-ubc-medicine-wordmark) {
+      transform-box: fill-box;
+      animation: wipe-across 420ms 360ms ease-out backwards;
+    }
+
+    & :global(#experience-ams-ubc-sunburst) {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: radial 520ms cubic-bezier(.2,.7,.3,1) backwards;
+    }
+
+    & :global(#experience-ams-ubc-wordmark),
+    & :global(#experience-ams-ubc-wordmark ~ *) {
+      transform-box: fill-box;
+      animation: wipe-across 400ms 330ms ease-out backwards;
+    }
+
+    & :global(#experience-herbaland-emblem > path) {
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: assemble 380ms var(--delay, 0ms) ease-out backwards;
+    }
+
+    & :global(#experience-herbaland-emblem > path:nth-child(2)) { --delay: 85ms; }
+    & :global(#experience-herbaland-emblem > path:nth-child(3)) { --delay: 170ms; }
+    & :global(#experience-herbaland-emblem > path:nth-child(4)) { --delay: 255ms; }
+
+    & :global(#experience-herbaland-wordmark) {
+      animation: rise 360ms 430ms ease-out backwards;
+    }
+  }
+
+  @keyframes appear { from { opacity: 0; } }
+  @keyframes power-on { from { opacity: 0.12; } }
+  @keyframes scan-down { from { clip-path: inset(0 0 100% 0); } to { clip-path: inset(0); } }
+  @keyframes wipe-across { from { clip-path: inset(0 100% 0 0); } to { clip-path: inset(0); } }
+  @keyframes rise { from { opacity: 0; translate: 0 8px; } }
+  @keyframes airframe { from { opacity: 0; scale: 0.38 1; translate: 0 8px; } }
+  @keyframes radial { from { opacity: 0; rotate: -42deg; scale: 0.72; } }
+  @keyframes assemble { from { opacity: 0; scale: 0.24; } }
+}

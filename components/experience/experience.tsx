@@ -1,13 +1,13 @@
 "use client";
 
-import Image from "next/image";
 import { useRef, useState } from "react";
 import { experiences } from "../../data/experience";
 import styles from "./experience.module.css";
+import motion from "./logo-motion.module.css";
 
 const slideCount = experiences.length;
 
-export function Experience() {
+export function Experience({ artwork }: { artwork: readonly string[] }) {
   const [active, setActive] = useState(0);
   const touchStart = useRef<{ x: number; y: number } | null>(null);
 
@@ -64,16 +64,18 @@ export function Experience() {
               if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy) * 1.5) step(dx < 0 ? 1 : -1);
             }}
           >
-            {experiences.map(({ employer, role, dates, location, highlights, logo }, index) => (
+            {experiences.map(({ employer, role, dates, location, highlights }, index) => (
               <article
                 key={employer}
                 className={styles.slide}
                 data-active={index === active}
                 aria-hidden={index !== active}
               >
-                <figure className={styles.art}>
-                  <Image src={logo} alt={`Unofficial retro identity for ${employer}`} width={480} height={224} unoptimized />
-                </figure>
+                <figure
+                  className={motion.art}
+                  data-playing={index === active}
+                  dangerouslySetInnerHTML={{ __html: artwork[index] }}
+                />
                 <div className={styles.copy}>
                   <h3>{employer}</h3>
                   <p className={styles.role}>{role}</p>

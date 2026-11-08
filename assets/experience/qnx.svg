@@ -15,7 +15,8 @@
 <path d="M38 41h404M38 181h404" stroke="#fff5e7" stroke-opacity=".55"/>
 <g id="wordmark" transform="translate(64 59) skewX(-7)" fill="#ff694c">
 <path fill-rule="evenodd" d="M12 0h79l12 12v61l-12 12H12L0 73V12Zm15 21-4 4v35l4 4h49l4-4V25l-4-4Z"/>
-<path d="M65 49h23l26 39H91ZM123 85V0h23l60 53V0h23v85h-23l-60-53v53ZM241 0h29l28 28 27-28h30l-43 42 43 43h-30l-27-28-28 28h-29l43-43Z"/>
+<path d="M65 49h23l26 39H91ZM123 85V0h23l60 53V0h23v85h-23l-60-53v53Z"/>
+<path d="M241 0h29l28 28 27-28h30l-43 42 43 43h-30l-27-28-28 28h-29l43-43Z"/>
 </g>
 <path id="signal-band" d="M48 159h83m216 0h84" stroke="#fff5e7" stroke-width="5"/>
 <text x="240" y="164" text-anchor="middle" class="label" fill="#fff5e7">BLACKBERRY QNX</text>
