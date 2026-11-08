@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 224" role="img" aria-labelledby="title">
+  <title id="title">UBC Exhibition plate, unofficial retro concept</title>
+  <style>.label{font:700 13px monospace;letter-spacing:1.25px}</style>
+  <defs><pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 3h4" stroke="#002145" stroke-opacity=".22"/></pattern></defs>
+  <rect width="480" height="224" fill="#101619"/>
+  <path id="plate" d="M34 25H446l16 16v142l-16 16H34l-16-16V41Z" fill="#0055B7" stroke="#97D4E9" stroke-width="2"/>
+<path d="M39 43h402M39 181h402" stroke="#97D4E9" opacity=".75"/>
+<g id="wordmark" fill="#FFFFFF" transform="translate(66 59)">
+  <path d="M0 0h23v58l7 7h44l7-7V0h23v69L86 87H18L0 69Z"/>
+  <path fill-rule="evenodd" d="M121 0h85l13 12v23l-9 8 11 10v21l-14 13h-86Zm23 18v16h49l4-4v-8l-4-4Zm0 35v16h50l5-4v-8l-5-4Z"/>
+  <path d="M249 0h95v22h-81l-6 6v31l6 6h81v22h-95l-16-16V16Z"/>
+</g>
+<text x="240" y="170" text-anchor="middle" fill="#FFFFFF" class="label">UNIVERSITY OF BRITISH COLUMBIA</text>
+  <rect width="480" height="224" fill="url(#scan)" pointer-events="none"/>
+</svg>

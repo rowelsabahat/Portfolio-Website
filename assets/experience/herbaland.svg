@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 224" role="img" aria-labelledby="title">
+  <title id="title">Herbaland Naturals Inc. unofficial retro concept</title>
+  <style>text{font-family:Arial,sans-serif}.label{font:700 15px monospace;letter-spacing:1px}</style>
+  <defs><pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 3h4" stroke="#090b0c" stroke-opacity=".16"/></pattern></defs>
+  <rect width="480" height="224" fill="#101619"/>
+  <g id="emblem" transform="translate(52 65)">
+<path d="M51 49C14 50 1 33 4 7c29-3 47 10 47 42Z" fill="#78d8a4"/>
+<path d="M57 49C57 16 74 4 101 7c2 26-10 43-44 42Z" fill="#f2cb58"/>
+<path d="M51 55c-34 0-47 16-47 38 27 3 45-10 47-38Z" fill="#f68e7a"/>
+<path d="M57 55c34 0 47 16 44 38-26 3-43-10-44-38Z" fill="#78d8a4"/>
+</g>
+<g id="wordmark" transform="translate(170 0)">
+<text y="123" fill="#f2cb58" font-size="45" font-weight="900" letter-spacing="-2">Herbaland</text>
+<text y="155" fill="#78d8a4" class="label">NATURALS INC.</text>
+</g>
+  <rect width="480" height="224" fill="url(#scanlines)" pointer-events="none"/>
+</svg>
