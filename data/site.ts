@@ -12,7 +12,7 @@ export const site = {
   navigation: [
     { label: "Home", id: "home", available: true },
     { label: "Education", id: "education", available: true },
-    { label: "Experience", id: "experience", available: false },
+    { label: "Experience", id: "experience", available: true },
     { label: "Projects", id: "projects", available: false },
     { label: "Places", id: "places", available: false },
     { label: "Contact", id: "contact", available: false },

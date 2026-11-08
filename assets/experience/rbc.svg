@@ -1,8 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 224" role="img" aria-labelledby="title">
   <title id="title">Royal Bank of Canada (RBC) unofficial retro concept</title>
   <style>text{font-family:Arial,sans-serif}.label{font:700 15px monospace;letter-spacing:1px}</style>
-  <defs><pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 3h4" stroke="#090b0c" stroke-opacity=".16"/></pattern></defs>
-  <rect width="480" height="224" fill="#101619"/>
   <defs>
   <linearGradient id="blue-screen" x2="0" y2="1"><stop stop-color="#073d9e"/><stop offset=".53" stop-color="#104eb3"/><stop offset="1" stop-color="#082463"/></linearGradient>
   <pattern id="display-lines" width="4" height="6" patternUnits="userSpaceOnUse"><path d="M0 5h4" stroke="#050e2d" stroke-opacity=".63" stroke-width="2"/></pattern>
@@ -21,5 +19,4 @@
 </g>
 <rect width="480" height="224" clip-path="url(#screen-shape)" fill="url(#display-lines)" opacity=".75"/>
 <path d="M29 21H451l13 13v156l-13 13H29l-13-13V34Z" fill="none" stroke="#fff1ae" stroke-width="3"/>
-  <rect width="480" height="224" fill="url(#scanlines)" pointer-events="none"/>
 </svg>

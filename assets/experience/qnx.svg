@@ -1,9 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 224" role="img" aria-labelledby="title">
   <title id="title">BlackBerry QNX unofficial retro concept</title>
   <style>text{font-family:Arial,sans-serif}.label{font:700 15px monospace;letter-spacing:1px}</style>
-  <defs><pattern id="scanlines" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 3h4" stroke="#090b0c" stroke-opacity=".16"/></pattern></defs>
-  <rect width="480" height="224" fill="#101619"/>
-  <path id="display-frame" d="M37 23h406l17 17v144l-17 17H37l-17-17V40Z" fill="#191818" stroke="#755045" stroke-width="2"/>
+  <defs>
+    <pattern id="crt-stripes" width="4" height="6" patternUnits="userSpaceOnUse">
+      <rect width="4" height="6" fill="white"/>
+      <path d="M0 5h4" stroke="#a3a3a3" stroke-width="2"/>
+    </pattern>
+    <mask id="crt-artwork" maskUnits="userSpaceOnUse" x="0" y="0" width="480" height="224">
+      <rect width="480" height="224" fill="url(#crt-stripes)"/>
+    </mask>
+  </defs>
+  <g mask="url(#crt-artwork)">
+  <path id="display-frame" d="M37 23h406l17 17v144l-17 17H37l-17-17V40Z" fill="none" stroke="#755045" stroke-width="2"/>
 <path d="M38 41h404M38 181h404" stroke="#fff5e7" stroke-opacity=".55"/>
 <g id="wordmark" transform="translate(64 59) skewX(-7)" fill="#ff694c">
 <path fill-rule="evenodd" d="M12 0h79l12 12v61l-12 12H12L0 73V12Zm15 21-4 4v35l4 4h49l4-4V25l-4-4Z"/>
@@ -11,5 +19,5 @@
 </g>
 <path id="signal-band" d="M48 159h83m216 0h84" stroke="#fff5e7" stroke-width="5"/>
 <text x="240" y="164" text-anchor="middle" class="label" fill="#fff5e7">BLACKBERRY QNX</text>
-  <rect width="480" height="224" fill="url(#scanlines)" pointer-events="none"/>
+  </g>
 </svg>

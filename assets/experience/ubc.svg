@@ -1,8 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 224" role="img" aria-labelledby="title">
   <title id="title">UBC Exhibition plate, unofficial retro concept</title>
   <style>.label{font:700 13px monospace;letter-spacing:1.25px}</style>
-  <defs><pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse"><path d="M0 3h4" stroke="#002145" stroke-opacity=".22"/></pattern></defs>
-  <rect width="480" height="224" fill="#101619"/>
+  <defs>
+    <pattern id="crt-stripes" width="4" height="6" patternUnits="userSpaceOnUse">
+      <rect width="4" height="6" fill="white"/>
+      <path d="M0 5h4" stroke="#a3a3a3" stroke-width="2"/>
+    </pattern>
+    <mask id="crt-artwork" maskUnits="userSpaceOnUse" x="0" y="0" width="480" height="224">
+      <rect width="480" height="224" fill="url(#crt-stripes)"/>
+    </mask>
+  </defs>
+  <g mask="url(#crt-artwork)">
   <path id="plate" d="M34 25H446l16 16v142l-16 16H34l-16-16V41Z" fill="#0055B7" stroke="#97D4E9" stroke-width="2"/>
 <path d="M39 43h402M39 181h402" stroke="#97D4E9" opacity=".75"/>
 <g id="wordmark" fill="#FFFFFF" transform="translate(66 59)">
@@ -11,5 +19,5 @@
   <path d="M249 0h95v22h-81l-6 6v31l6 6h81v22h-95l-16-16V16Z"/>
 </g>
 <text x="240" y="170" text-anchor="middle" fill="#FFFFFF" class="label">UNIVERSITY OF BRITISH COLUMBIA</text>
-  <rect width="480" height="224" fill="url(#scan)" pointer-events="none"/>
+  </g>
 </svg>
