@@ -14,7 +14,7 @@ export const site = {
     { label: "Education", id: "education", available: true },
     { label: "Experience", id: "experience", available: true },
     { label: "Projects", id: "projects", available: true },
-    { label: "Places", id: "places", available: false },
+    { label: "Places", id: "places", available: true },
     { label: "Contact", id: "contact", available: false },
   ],
 } as const;

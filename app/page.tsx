@@ -3,6 +3,7 @@ import { ExperienceSection } from "../components/experience/experience-section";
 import { Hero } from "../components/hero/hero";
 import { SiteHeader } from "../components/navigation/site-header";
 import { ProjectsSection } from "../components/projects/projects-section";
+import { PlacesSection } from "../components/places/places-section";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Education />
         <ExperienceSection />
         <ProjectsSection />
+        <PlacesSection />
       </main>
     </>
   );
