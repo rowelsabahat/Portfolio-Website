@@ -1,0 +1,36 @@
+.review {
+  width: min(92%, 88rem);
+  margin: auto;
+  padding-block: 2rem;
+}
+
+.review h1 { font: 700 clamp(2rem, 4vw, 3.25rem)/1.1 var(--font-display); }
+.review > p { margin-top: .75rem; color: var(--color-cyan); }
+.review > section > h2, .comparison > section > h2 {
+  font: 700 1rem/1.4 var(--font-mono);
+  margin-bottom: .75rem;
+}
+.review > section, .comparison { margin-top: 2rem; }
+
+.comparison {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.crop, .reconstruction { aspect-ratio: 1024 / 215; overflow: hidden; }
+.crop { position: relative; }
+.crop img { position: absolute; bottom: 0; width: 100%; height: auto; }
+
+/* Compare at desktop proportions, even when the review columns are narrow. */
+.reconstruction { container-type: inline-size; aspect-ratio: 1024 / 241; }
+.reconstruction > div { width: 1024px; transform: scale(tan(atan2(100cqw, 1024px))); transform-origin: top left; }
+
+.tablet { max-width: 768px; }
+.mobile { max-width: 390px; }
+.earth { max-width: 680px; }
+.earth svg { width: 100%; display: block; background: #0a0e10; }
+
+@media (max-width: 700px) {
+  .comparison { grid-template-columns: minmax(0, 1fr); }
+}
