@@ -1,0 +1,48 @@
+.identity {
+  margin: 0;
+  container-type: inline-size;
+}
+
+.mark {
+  display: grid;
+  text-align: center;
+}
+
+.mark svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.caption {
+  display: grid;
+  gap: 1.8cqw;
+}
+
+.name, .country {
+  mask-image: repeating-linear-gradient(
+    to bottom,
+    #000 0 calc(100% - .65px),
+    rgb(0 0 0 / 68%) calc(100% - .65px) 100%
+  );
+  mask-size: 100% clamp(2px, .74cqw, 4px);
+  mask-repeat: repeat-y;
+}
+
+.name {
+  justify-self: center;
+  /* Give the italic glyphs and text stroke room inside the scanline mask. */
+  padding-inline: .16em;
+  color: var(--color-cream);
+  font: italic 700 13cqw/.92 var(--font-display);
+  letter-spacing: -.042em;
+  text-transform: uppercase;
+  transform: skewX(-5deg) scaleX(1.17);
+  -webkit-text-stroke: .14cqw currentColor;
+}
+
+.country {
+  font: 5.2cqw/1 var(--font-mono);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
