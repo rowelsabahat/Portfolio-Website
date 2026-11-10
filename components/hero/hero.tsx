@@ -1,28 +1,27 @@
+import { useId } from "react";
+import type { ReactNode } from "react";
 import { site } from "../../data/site";
-import { HeroArt } from "./hero-art";
+import { HeroArt, HeroRidge } from "./hero-art";
+import { HeroRoles } from "./hero-roles";
 
-export function Hero() {
-  const { nameLines, focus, introduction } = site.hero;
+export function Hero({ lighting }: { lighting?: ReactNode } = {}) {
+  const titleId = useId();
+  const { nameLines, focus } = site.hero;
 
   return (
-    <section className="portfolio-hero" aria-labelledby="hero-title">
+    <section className="portfolio-hero" aria-labelledby={titleId}>
+      <HeroRidge />
       <div className="hero-inner">
         <div className="hero-copy">
-          <p className="hero-kicker">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
-              <circle cx="12" cy="12" r="10" />
-              <ellipse cx="12" cy="12" rx="4.5" ry="10" />
-              <path d="M2.5 9h19m-19 6h19" />
-            </svg>
-            Portfolio <span aria-hidden="true">/</span> 01
-          </p>
-          <h1 id="hero-title" className="hero-title">
+          <h1 id={titleId} className="hero-title">
             {nameLines.map((line) => <span key={line}>{line} </span>)}
           </h1>
-          <p className="hero-focus">{focus}</p>
-          <p className="hero-intro">{introduction}</p>
+          <HeroRoles phrases={focus} />
+          <a className="hero-cta" href="#education">
+            Explore my portfolio below <span aria-hidden="true">↓</span>
+          </a>
         </div>
-        <HeroArt />
+        <HeroArt lighting={lighting} />
       </div>
     </section>
   );

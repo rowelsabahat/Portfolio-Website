@@ -1,3 +1,5 @@
+import { Starfield } from "./starfield";
+import styles from "./page.module.css";
 import { ContactSection } from "../components/contact/contact-section";
 import { Education } from "../components/education/education";
 import { ExperienceSection } from "../components/experience/experience-section";
@@ -12,11 +14,14 @@ export default function Home() {
       <SiteHeader />
       <main id="home" tabIndex={-1}>
         <Hero />
-        <Education />
-        <ExperienceSection />
-        <ProjectsSection />
-        <PlacesSection />
-        <ContactSection />
+        <div className={styles.starfield}>
+          <Starfield />
+          <Education />
+          <ExperienceSection />
+          <ProjectsSection />
+          <PlacesSection />
+          <ContactSection />
+        </div>
       </main>
     </>
   );

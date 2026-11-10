@@ -1,5 +1,4 @@
 .section {
-  background: var(--color-charcoal);
 }
 
 .inner {
@@ -12,11 +11,11 @@
 }
 
 .heading {
-  border-inline-end: 1px solid color-mix(in srgb, var(--color-mint) 55%, transparent);
-  padding-inline-end: clamp(1rem, 2vw, 2rem);
+  border-inline-start: 1px solid color-mix(in srgb, var(--color-mint) 55%, transparent);
+  padding-inline-start: clamp(1rem, 2vw, 2rem);
 }
 
-.label, .number {
+.label {
   color: var(--color-mint);
   font: 0.82rem/1.5 var(--font-mono);
   text-transform: uppercase;
@@ -25,14 +24,14 @@
 .heading h2 {
   max-width: 11ch;
   margin-top: 0.65rem;
-  font: italic 700 clamp(2rem, 3.35vw, 3.35rem)/0.95 var(--font-display);
+  font: italic 700 var(--section-heading-size)/0.95 var(--font-display);
   letter-spacing: -0.055em;
   text-transform: uppercase;
 }
 
 .credential {
   display: grid;
-  grid-template-columns: auto minmax(0, 1fr) auto;
+  grid-template-columns: minmax(0, 1fr) auto;
   gap: 0.45rem clamp(0.7rem, 1.55vw, 1.4rem);
   align-items: baseline;
   padding-block: 1.1rem;
@@ -63,17 +62,12 @@
   font: 0.8rem/1.4 var(--font-mono);
 }
 
-.detail a {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.35rem;
-  min-height: 44px;
-  width: fit-content;
+.label a {
   text-decoration: underline;
   text-underline-offset: 0.25em;
 }
 
-.detail a:hover { color: var(--color-mint); }
+.label a:hover { color: var(--color-cream); }
 
 @media (max-width: 839px) {
   .inner {
@@ -82,19 +76,38 @@
   }
 
   .heading {
-    border-inline-end: 0;
-    padding-inline-end: 0;
+    border-inline-start: 0;
+    padding-inline-start: 0;
   }
 
   .heading h2 { max-width: 19ch; }
 }
 
 @media (max-width: 560px) {
-  .credential { grid-template-columns: auto minmax(0, 1fr); }
+  .credential { grid-template-columns: minmax(0, 1fr); }
 
   .detail {
-    grid-column: 2;
     padding-inline-start: 0;
     border-inline-start: 0;
+  }
+}
+
+.intro {
+  max-width: 27ch;
+  margin-top: 0.85rem;
+  font: 0.9rem/1.55 var(--font-sans);
+}
+
+@media (width > 839px) {
+  .inner {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 0.85fr);
+  }
+
+  .heading {
+    grid-area: 1 / 2;
+  }
+
+  .credentials {
+    grid-area: 1 / 1;
   }
 }

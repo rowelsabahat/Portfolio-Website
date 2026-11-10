@@ -34,12 +34,11 @@ export function PlacesSection() {
   }
 
   return (
-    <section id="places" className={styles.section} aria-labelledby="places-title">
+    <section id="places" data-star-density=".95" className={styles.section} aria-labelledby="places-title">
       <div className={styles.inner}>
         <header className={styles.heading}>
-          <p className={styles.label}>05 / Places</p>
-          <h2 id="places-title">Places I&apos;ve called home.</h2>
-          <p className={styles.intro}>Four cities, different chapters, and the experiences that shaped my perspective.</p>
+          <h2 id="places-title"><span data-star-clear>The places I&apos;ve called home</span></h2>
+          <p className={styles.intro}><span data-star-clear>Four cities, different chapters, and the experiences that shaped my perspective.</span></p>
         </header>
         <div className={styles.content}>
           <div>
@@ -56,7 +55,7 @@ export function PlacesSection() {
                 });
 
                 return (
-                  <section key={id} className={styles.region} aria-labelledby={`places-${id}`}>
+                  <section key={id} className={styles.region} data-star-clear aria-labelledby={`places-${id}`}>
                     <h3 id={`places-${id}`}>{name}</h3>
                     <div className={styles.map}>
                       <svg viewBox={`0 0 ${mapWidth} ${mapHeight}`} aria-hidden="true">
@@ -84,7 +83,7 @@ export function PlacesSection() {
                 );
               })}
             </div>
-            <div className={styles.selectors} role="group" aria-label="Choose a city">
+            <div className={styles.selectors} data-star-clear role="group" aria-label="Choose a city">
               {cities.map((city) => (
                 <button key={city.id} type="button" aria-pressed={selected.id === city.id}
                   aria-controls="places-reveal" onClick={() => selectCity(city)}>
@@ -93,7 +92,7 @@ export function PlacesSection() {
               ))}
             </div>
           </div>
-          <div id="places-reveal" className={styles.reveal}>
+          <div id="places-reveal" data-star-clear className={styles.reveal}>
             <p className="sr-only" role="status">{selected.name}, {selected.country} selected</p>
             <div className={styles.artwork} key={revision} data-transition={revision > 0}>
               {PreviousIdentity && (

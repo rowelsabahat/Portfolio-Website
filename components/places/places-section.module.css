@@ -1,13 +1,14 @@
 .section {
-  background: var(--color-charcoal);
+  position: relative;
+  isolation: isolate;
   scroll-margin-block-start: 1rem;
 }
+
 
 .inner {
   width: min(88%, 88rem);
   margin-inline: auto;
   padding-block: clamp(2.5rem, 4.2vw, 4rem);
-  border-top: 1px solid color-mix(in srgb, var(--color-cyan) 34%, transparent);
 }
 
 .label, .region h3 {
@@ -18,7 +19,7 @@
 
 .heading h2 {
   margin-top: .65rem;
-  font: italic 700 clamp(2rem, 3.35vw, 3.35rem)/.95 var(--font-display);
+  font: italic 700 var(--section-heading-size)/.95 var(--font-display);
   letter-spacing: -.055em;
   text-transform: uppercase;
 }
@@ -57,14 +58,14 @@
 .map {
   position: relative;
   aspect-ratio: 420 / 270;
-  background: #0b1518;
+  background: color-mix(in srgb, var(--color-cream) 4%, var(--color-charcoal));
 }
 
 .map svg { display: block; width: 100%; height: 100%; }
 .outlines path {
-  fill: #102528;
+  fill: color-mix(in srgb, var(--color-cream) 13%, var(--color-charcoal));
   fill-rule: evenodd;
-  stroke: #487b7c;
+  stroke: var(--color-cream);
   stroke-width: .85;
   vector-effect: non-scaling-stroke;
 }
@@ -126,15 +127,27 @@
 }
 
 .selectors button:hover:not([aria-pressed="true"]) {
-  border-color: var(--color-cyan);
-  background: #112325;
+  border-color: var(--color-mint);
+  background: color-mix(in srgb, var(--color-mint) 10%, var(--color-charcoal));
 }
 
 .reveal {
-  padding: clamp(.8rem, 2vw, 1.6rem);
-  border: 1px solid #467975;
-  background: #0e1415;
+  --corner: polygon(0.75rem 0, calc(100% - 0.75rem) 0, 100% 0.75rem, 100% calc(100% - 0.75rem), calc(100% - 0.75rem) 100%, 0.75rem 100%, 0 calc(100% - 0.75rem), 0 0.75rem);
+  position: relative;
+  isolation: isolate;
+  padding: calc(clamp(.8rem, 2vw, 1.6rem) + 2px);
 }
+
+.reveal::before, .reveal::after {
+  position: absolute;
+  z-index: -1;
+  clip-path: var(--corner);
+  content: "";
+  pointer-events: none;
+}
+
+.reveal::before { inset: 0; background: var(--color-cream); }
+.reveal::after { inset: 2px; background: #0e1415; }
 .artwork { position: relative; }
 .outgoing { display: none; }
 
@@ -180,3 +193,6 @@
   .maps, .selectors { grid-template-columns: minmax(0, 1fr); }
   .selectors { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+
+
+.heading { width: fit-content; }

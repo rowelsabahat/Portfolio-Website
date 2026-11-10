@@ -12,20 +12,19 @@ export function ContactSection({ preview = false }: { preview?: boolean }) {
   const headingId = preview ? undefined : "contact-title";
 
   return (
-    <div className={styles.closing}>
-      <section id={preview ? undefined : "contact"} className={styles.contact}
+    <div className={styles.closing} data-star-density=".90">
+      <section id={preview ? undefined : "contact"}
         aria-labelledby={headingId} aria-label={preview ? "Contact preview" : undefined}>
         <div className={styles.inner}>
           <div>
-            <p className={styles.label}>06 / Contact</p>
-            <h2 id={headingId}>Let&apos;s<br />Connect.</h2>
+            <h2 id={headingId} data-star-clear>Let&apos;s<br />Connect</h2>
           </div>
           <div className={styles.details}>
-            <p>I&apos;m always up for a conversation about innovation, ideas, and what&apos;s next.</p>
+            <p data-star-clear>I&apos;m always up for a conversation about innovation, ideas, and what&apos;s next in store for me!</p>
             <ul className={styles.links}>
               {links.map(({ label, href, path, external }) => (
                 <li key={label}>
-                  <a href={href} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined}>
+                  <a data-star-clear href={href} target={external ? "_blank" : undefined} rel={external ? "noopener noreferrer" : undefined}>
                     <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor"
                       strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"><path d={path} /></svg>
                     {label}
@@ -35,7 +34,7 @@ export function ContactSection({ preview = false }: { preview?: boolean }) {
             </ul>
           </div>
         </div>
-        <div className={styles.earth}><RetroEarth /></div>
+        <div className={styles.earth} data-star-clear><RetroEarth /></div>
       </section>
       {!preview && <SiteFooter />}
     </div>
@@ -45,8 +44,8 @@ export function ContactSection({ preview = false }: { preview?: boolean }) {
 function SiteFooter() {
   return (
     <footer className={styles.footer} role="contentinfo">
-      <span>© {new Date().getFullYear()} {site.name}</span>
-      <a href="#home">Back to top ↑</a>
+      <span data-star-clear>© {new Date().getFullYear()} {site.name}</span>
+      <a data-star-clear href="#home" aria-label="Back to top">↑</a>
     </footer>
   );
 }

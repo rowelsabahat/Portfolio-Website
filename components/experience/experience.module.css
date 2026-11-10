@@ -1,6 +1,5 @@
-.section {
-  border-block: 1px solid color-mix(in srgb, var(--color-cyan) 55%, transparent);
-  background: var(--color-charcoal);
+.heading {
+  width: fit-content;
 }
 
 .inner {
@@ -13,7 +12,7 @@
   padding-block: clamp(2.5rem, 4.2vw, 4rem);
 }
 
-.label, .meta {
+.meta {
   color: var(--color-mint);
   font: 0.82rem/1.5 var(--font-mono);
   text-transform: uppercase;
@@ -22,9 +21,15 @@
 .heading h2 {
   max-width: 11ch;
   margin-top: 0.65rem;
-  font: italic 700 clamp(2rem, 3.35vw, 3.35rem)/0.95 var(--font-display);
+  font: italic 700 var(--section-heading-size)/0.95 var(--font-display);
   letter-spacing: -0.055em;
   text-transform: uppercase;
+}
+
+.intro {
+  max-width: 27ch;
+  margin-top: 0.85rem;
+  font: 0.9rem/1.55 var(--font-sans);
 }
 
 .carousel {
@@ -42,24 +47,24 @@
   pointer-events: none;
 }
 
-.carousel::before { inset: 0; background: var(--color-cyan); }
-.carousel::after { inset: 1px; background: linear-gradient(140deg, #152327, var(--color-charcoal) 70%); }
+.carousel::before { inset: 0; background: var(--color-cream); }
+.carousel::after { inset: 2px; background: linear-gradient(140deg, color-mix(in srgb, var(--color-cream) 10%, var(--color-charcoal)), var(--color-charcoal) 70%); }
 
 .controls, .buttons { display: flex; align-items: center; gap: 0.6rem; }
-.controls { justify-content: space-between; margin-bottom: 0.9rem; }
+.controls { justify-content: flex-end; margin-bottom: 0.9rem; }
 
 .buttons button {
   display: grid;
   min-width: 44px;
   min-height: 44px;
   place-items: center;
-  border: 1px solid color-mix(in srgb, var(--color-cyan) 60%, transparent);
+  border: 1px solid color-mix(in srgb, var(--color-cream) 60%, transparent);
   color: var(--color-cream);
   font: 1.4rem var(--font-mono);
   cursor: pointer;
 }
 
-.buttons button:hover { color: var(--color-charcoal); background: var(--color-cyan); }
+.buttons button:hover { color: var(--color-charcoal); background: var(--color-mint); }
 
 .slides { display: grid; touch-action: pan-y pinch-zoom; }
 
@@ -76,7 +81,7 @@
 
 .copy {
   padding-inline-start: clamp(1rem, 2vw, 1.8rem);
-  border-inline-start: 1px solid color-mix(in srgb, var(--color-cyan) 55%, transparent);
+  border-inline-start: 1px solid color-mix(in srgb, var(--color-mint) 55%, transparent);
 }
 
 .copy h3 { font: 700 clamp(1.25rem, 2vw, 1.8rem)/1.12 var(--font-display); }
@@ -99,5 +104,12 @@
 
 @media (max-width: 639px) {
   .slide { grid-template-columns: minmax(0, 1fr); align-content: start; }
-  .copy { padding: 1rem 0 0; border-inline-start: 0; border-top: 1px solid color-mix(in srgb, var(--color-cyan) 55%, transparent); }
+  .copy { padding: 1rem 0 0; border-inline-start: 0; border-top: 1px solid color-mix(in srgb, var(--color-mint) 55%, transparent); }
+}
+
+.copy h3 a,
+.highlights a {
+  color: var(--color-mint);
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
 }

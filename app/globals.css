@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
 @theme {
+  --section-heading-size: clamp(2.2rem, 3.65vw, 3.65rem);
   --color-charcoal: #0b0d0f;
+  --background-scanlines: repeating-linear-gradient(#0b1012 0 2px, #0a0e10 2px 4px);
   --color-mint: #37eba5;
   --color-cyan: #3ae0df;
   --color-cream: #f5e5bb;
@@ -20,7 +22,7 @@
   }
 
   body {
-    background: var(--color-charcoal);
+    background: var(--background-scanlines);
     color: var(--color-cream);
     font-family: var(--font-sans);
   }

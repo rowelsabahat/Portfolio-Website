@@ -1,13 +1,17 @@
 export const site = {
   name: "Rowel Sabahat",
   title: "Rowel Sabahat | Portfolio",
-  description: "The personal portfolio of Rowel Sabahat.",
+  description: "Rowel Sabahat’s portfolio of product delivery, technical project management, and independent projects.",
   hero: {
     nameLines: ["Rowel", "Sabahat"],
-    // TODO: Replace the preview copy and portrait with approved content.
-    focus: "Product Manager",
-    introduction: "Exploring how technology can solve problems for the people who use it.",
-    portrait: null as { src: string; alt: string; position?: string } | null,
+    focus: [
+      "A product manager.",
+      "A project manager.",
+      "An innovator.",
+      "A sunset catcher.",
+      "An explorer.",
+    ],
+    portrait: { src: "/portraits/rowel-hero-charcoal.webp", alt: "Rowel Sabahat smiling and wearing glasses" },
   },
   navigation: [
     { label: "Home", id: "home", available: true },

@@ -36,7 +36,7 @@ function ProjectCard({
 
   return (
     <article className={id === "reading" ? styles.wide : undefined}>
-      <div className={styles.coverControl}>
+      <div className={styles.coverControl} data-star-clear>
         <Cover />
         <button
           type="button"
@@ -49,7 +49,7 @@ function ProjectCard({
           <span aria-hidden="true">{expanded ? "−" : "+"}</span>
         </button>
       </div>
-      <div id={panelId} className={styles.details} hidden={!expanded}>
+      <div id={panelId} className={styles.details} data-star-clear hidden={!expanded}>
         <h4>{name}</h4>
         <p className={styles.metadata}>
           {category}
@@ -89,12 +89,11 @@ export function ProjectsSection() {
   }
 
   return (
-    <section id="projects" tabIndex={-1} aria-labelledby="projects-title" className={styles.section}>
+    <section id="projects" data-star-density="1.05" tabIndex={-1} aria-labelledby="projects-title" className={styles.section}>
       <div className={styles.inner}>
         <header className={styles.heading}>
-          <p className={styles.label}>04 / Projects</p>
-          <h2 id="projects-title">Selected projects.</h2>
-          <p className={styles.intro}>A collection of ideas I&apos;ve built, tested, and explored.</p>
+          <h2 id="projects-title"><span data-star-clear>The projects I&apos;ve built</span></h2>
+          <p className={styles.intro}><span data-star-clear>A collection of ideas that I&apos;ve let run wild, tested, and explored.</span></p>
         </header>
         <div className={styles.gallery}>
           <div className={styles.grid}>{projects.slice(0, 3).map(renderCard)}</div>

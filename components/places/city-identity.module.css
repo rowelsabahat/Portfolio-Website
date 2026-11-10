@@ -31,13 +31,13 @@
 
 .name {
   justify-self: center;
-  /* Give the italic glyphs and text stroke room inside the scanline mask. */
+  /* Give the glyphs and text stroke room inside the scanline mask. */
   padding-inline: .16em;
   color: var(--color-cream);
-  font: italic 700 13cqw/.92 var(--font-display);
+  font: 700 13cqw/.92 var(--font-display);
   letter-spacing: -.042em;
   text-transform: uppercase;
-  transform: skewX(-5deg) scaleX(1.17);
+  transform: scaleX(1.17);
   -webkit-text-stroke: .14cqw currentColor;
 }
 

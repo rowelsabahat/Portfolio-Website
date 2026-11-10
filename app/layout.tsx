@@ -8,6 +8,11 @@ import { site } from "../data/site";
 export const metadata: Metadata = {
   title: site.title,
   description: site.description,
+  openGraph: {
+    type: "website",
+    title: site.title,
+    description: site.description,
+  },
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {

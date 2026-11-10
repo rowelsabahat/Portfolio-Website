@@ -64,7 +64,7 @@ export const projects = [
     category: "AI / Product Management / User Research",
     dates: "January 2025 – May 2025",
     technologies: ["AI Product Development", "User Research", "Product Requirements"],
-    summary: "A product discovery and requirements initiative exploring AI-powered content recommendations to improve content curation and personalization on Pinterest.",
+    summary: "Product discovery for an AI-powered Pinterest content recommendation system, identifying user pain points and defining personalization features to improve content discovery, relevance, and user engagement",
     resources: [
       { label: "PRD", url: "https://docs.google.com/document/d/1TMmYtD7enrBQG1lv-vaQYnGQwLjSmZ8BXavZ5tEdrlo/edit?usp=sharing" },
       { label: "Video Presentation", url: "https://youtu.be/4RkUKlXdJeg" },
@@ -79,7 +79,7 @@ export const projects = [
     summary: "A biometric identification system that uses skeletal movement patterns to identify individuals from low-resolution video feeds.",
     resources: [
       { label: "GitHub", url: "https://github.com/Joshua-Chiu/CPSC538P-Project" },
-      { label: "Report", url: "https://drive.google.com/drive/folders/1TF8D2brsQgUvKnaSocKmne1nrHHUpqYm?usp=sharing" },
+      { label: "Report", url: "https://drive.google.com/file/d/1hOYeTpwJuK2U9pdsQJ1-UwiA7RBcB3Ir/view?usp=sharing" },
     ],
   },
   {

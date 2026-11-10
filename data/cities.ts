@@ -22,7 +22,7 @@ type City = {
 
 export const cities: readonly City[] = [
   { id: "vancouver", name: "Vancouver", country: "Canada", coordinates: { latitude: 49.2827, longitude: -123.1207 }, region: "northAmerica", Identity: VancouverIdentity,
-    description: "Where it all began. A city of familiar faces, endless coastlines, and the kind of roots that make anywhere else feel like an adventure.",
+    description: "Where I grew up, built lasting friendships, and made countless memories. A city that has shaped so much of who I am, and one I'll always call home.",
   },
   { id: "ottawa", name: "Ottawa", country: "Canada", coordinates: { latitude: 45.4215, longitude: -75.6972 }, region: "northAmerica", Identity: OttawaIdentity,
     description: "A new city, a new pace, and a chance to find my own rhythm. A chapter that pushed me outside the familiar, both personally and professionally.",

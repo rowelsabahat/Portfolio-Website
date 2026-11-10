@@ -13,6 +13,13 @@ const stars = Array.from({ length: 76 }, (_, index) => ({
   opacity: index % 5 === 0 ? .85 : .46,
 }));
 
+const transitionStars = Array.from({ length: 22 }, (_, index) => ({
+  x: 12 + starPosition(index, 63) * 108,
+  y: 24 + starPosition(index, 81) * 140,
+  radius: index % 4 === 0 ? .8 : .48,
+  opacity: .22 + starPosition(index, 57) * .28,
+}));
+
 export function RetroEarth() {
   const id = useId();
   const land = `${id}-land`;
@@ -35,7 +42,7 @@ export function RetroEarth() {
         </radialGradient>
       </defs>
       <g fill="#f5e5bb">
-        {stars.map(({ x, y, radius, opacity }) => (
+        {[...stars, ...transitionStars].map(({ x, y, radius, opacity }) => (
           <circle key={x} cx={x} cy={y} r={radius} opacity={opacity} />
         ))}
         <path d="m132 22 1.6 20 17.4 1.6-17.4 1.4-1.6 20-1.6-20-17.4-1.4 17.4-1.6Z" />

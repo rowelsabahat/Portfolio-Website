@@ -8,6 +8,7 @@
   color: var(--cover-cream);
 }
 
+
 .artwork, .frame { position: absolute; inset: 0; }
 .artwork svg, .frame { display: block; width: 100%; height: 100%; }
 /* Modulate the artwork itself so scanlines never fill the transparent gaps. */

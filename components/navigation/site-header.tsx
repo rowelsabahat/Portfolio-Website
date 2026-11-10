@@ -52,7 +52,6 @@ export function SiteHeader() {
           ))}
         </ul>
       </nav>
-      <span className="signal-bars" aria-hidden="true" />
     </header>
   );
 }
