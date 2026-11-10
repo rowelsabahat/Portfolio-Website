@@ -7,7 +7,7 @@ Next.js App Router + TypeScript + Tailwind CSS. GSAP only where meaningful motio
 
 ### Phase 0 — Bootstrap and repository policy
 - Initialize Next.js TypeScript Tailwind app in fresh directory; create git repository.
-- Copy DESIGN_BRIEF.md and AGENTS.md into project root; create `assets/reference/` or `public/references/` for user-provided inspiration images, with descriptive filenames.
+- Copy DESIGN_BRIEF.md into `docs/` and AGENTS.md into the project root; create `assets/reference/` or `public/references/` for user-provided inspiration images, with descriptive filenames.
 - Add content data placeholders in typed modules, component directories, `.gitignore`, README with run steps.
 - Do not build the full page yet. Run lint and build. Commit a clean baseline.
 - Deliverable: site runs locally with placeholder index and tokens; repository directions persistent.
@@ -76,8 +76,9 @@ public/
   geo/
   references/
 AGENTS.md
-DESIGN_BRIEF.md
-IMPLEMENTATION_PLAN.md
+docs/
+  DESIGN_BRIEF.md
+  IMPLEMENTATION_PLAN.md
 ```
 Use this as a target architecture, not a mandate to create empty files upfront.
 

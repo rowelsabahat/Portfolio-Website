@@ -2,7 +2,7 @@
 
 ## Prompt A: Bootstrap, do not implement the whole site
 
-Read `DESIGN_BRIEF.md`, `IMPLEMENTATION_PLAN.md`, and `AGENTS.md`. Treat the latest approved vertical mockup and the reference images as visual direction. We are at **Phase 0 only**.
+Read `docs/DESIGN_BRIEF.md`, `docs/IMPLEMENTATION_PLAN.md`, and `AGENTS.md`. Treat the latest approved vertical mockup and the reference images as visual direction. We are at **Phase 0 only**.
 
 1. Inspect the current directory and report whether it is empty or already contains a project.
 2. If empty, initialize a Next.js App Router project with TypeScript and Tailwind CSS. If it already contains a project, adapt it rather than overwriting it.

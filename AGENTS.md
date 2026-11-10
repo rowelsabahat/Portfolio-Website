@@ -1,6 +1,6 @@
 # Codex Project Instructions
 
-This repository implements Rowel Sabahat's personal portfolio. Read DESIGN_BRIEF.md and IMPLEMENTATION_PLAN.md before changing code. The latest approved mockup is the visual reference, but the explicit written decisions override ambiguities in the image.
+This repository implements Rowel Sabahat's personal portfolio. Read docs/DESIGN_BRIEF.md and docs/IMPLEMENTATION_PLAN.md before changing code. The latest approved mockup is the visual reference, but the explicit written decisions override ambiguities in the image.
 
 - Build a single vertically scrolling, editorial 1980s retro-tech portfolio, not a generic tech dashboard.
 - Avoid Japanese lettering, purple synthwave tropes, heavy repeated UI cards, and excessive/glitchy animations.
