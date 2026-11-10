@@ -1,15 +1,17 @@
-# Portfolio Kickoff Pack
+# Rowel Sabahat’s Portfolio
 
-Start by copying `docs/DESIGN_BRIEF.md`, `docs/IMPLEMENTATION_PLAN.md`, `AGENTS.md`, and `CODEX_PROMPTS.md` into your Codex project, preserving their relative paths. Keep the latest approved vertical mockup and inspiration files in the local `design references/` directory. Then send **Prompt A** from `CODEX_PROMPTS.md`.
+my portfolio website :^)
 
-Do not run all prompts at once. Review each milestone's visual output and ask Codex for tweaks before advancing.
+## Project documentation
 
-The provided pack documents the approved creative vision and staged implementation workflow; it is not the implementation itself.
+- [Design brief](docs/DESIGN_BRIEF.md)
+- [Implementation plan](docs/IMPLEMENTATION_PLAN.md)
+- [Project instructions](AGENTS.md)
+- [Codex prompts](CODEX_PROMPTS.md)
 
 ## Local development
 
-Phase 0 provides a placeholder homepage and the design foundation. Use Node.js
-20.9 or later and npm.
+Use Node.js 20.9 or later and npm.
 
 ```sh
 npm ci
