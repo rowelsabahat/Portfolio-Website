@@ -7,6 +7,7 @@ export const site = {
     focus: [
       "A product manager.",
       "A project manager.",
+      "An engineer.",
       "An innovator.",
       "A sunset catcher.",
       "An explorer.",
