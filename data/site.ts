@@ -6,8 +6,8 @@ export const site = {
     nameLines: ["Rowel", "Sabahat"],
     focus: [
       "A product manager.",
-      "A project manager.",
       "An engineer.",
+      "A project manager.",
       "An innovator.",
       "A sunset catcher.",
       "An explorer.",
